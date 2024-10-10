@@ -3,10 +3,10 @@
 #####################################################################
 
 # ip4 target con proxmox server
-endpoint = "172.16.0.70"
+endpoint = "172.16.8.82"
 
 # hostname target con proxmox server
-pve_target_host = "pvenas07"
+pve_target_host = "itmopve07"
 
 
 # login username target @ domain
