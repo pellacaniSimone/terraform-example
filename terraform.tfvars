@@ -32,7 +32,6 @@ procedura= [
       "rc-update add sshd",
       "service sshd start",
       "apk add python3 curl bash git wget libffi-dev ncurses-dev openssl-dev readline-dev tk-dev xz-dev zlib-dev gcc",
-      #"apk add py3-pip",
       "apk add gcc python3-dev musl-dev linux-headers R",
       "curl https://pyenv.run | bash",
       "python -m venv .venv",
