@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+
+description="JupyterLab service"
+command="bash /root/start_server.sh"
+user="root"  
+pidfile="/var/run/jupyterlab.pid"
+
+depend() {
+   need net
+}
+
+start() {
+    ebegin "Starting Jupyter Lab"
+    start-stop-daemon --start --user ${user} --exec ${command} --background --make-pidfile --pidfile ${pidfile}
+    eend $?
+}
+
+
+stop() {
+   ebegin "Stopping JupyterLab"
+   start-stop-daemon --stop --pidfile ${pidfile}
+   eend $?
+}
